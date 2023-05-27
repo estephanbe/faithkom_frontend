@@ -1,0 +1,27 @@
+/* styles/globals.css */
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.fk-sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-cls-1{
+    fill:url(#linear-gradient);
+}
+.logo-cls-2{fill:#fff;}
+.logo-cls-3{fill:url(#linear-gradient-8);}
+.logo-cls-4{fill:url(#linear-gradient-9);}
+.logo-cls-5{fill:url(#linear-gradient-3);}
+.logo-cls-6{fill:url(#linear-gradient-4);}
+.logo-cls-7{fill:url(#linear-gradient-2);}
+.logo-cls-8{fill:url(#linear-gradient-6);}
+.logo-cls-9{fill:url(#linear-gradient-7);}
+.logo-cls-10{fill:url(#linear-gradient-5);}
