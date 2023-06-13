@@ -11,7 +11,7 @@ import CourseEditor from '@/components/CreateCourse/CourseEditor'
 import AppLayout from '@/components/Layouts/AppLayout'
 import LaravelAxios from '@/lib/axios'
 import axios from 'axios'
-import Categories from "@/components/CreateCourse/Categories";
+import Categories from '@/components/CreateCourse/Categories'
 
 const EditCoursePage = () => {
     const router = useRouter()

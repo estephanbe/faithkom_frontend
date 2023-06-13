@@ -1,8 +1,6 @@
 import LabelLarge from '@/components/LabelLarge'
-import Input from '@/components/Input'
 import { useEffect, useState } from 'react'
 import axios from '@/lib/axios'
-import { FormSelect } from 'react-bootstrap'
 
 const Categories = ({
     // eslint-disable-next-line no-unused-vars
@@ -36,7 +34,6 @@ const Categories = ({
     }, [])
 
     useEffect(() => {
-        console.log(selectedCat)
         onData({
             cat_id: selectedCat,
         })

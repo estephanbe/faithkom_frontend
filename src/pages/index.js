@@ -171,8 +171,6 @@ export default function Home() {
                         </select>
                     </div>
                 </>
-
-
             )}
 
             <div
