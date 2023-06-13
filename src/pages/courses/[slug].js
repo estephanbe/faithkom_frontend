@@ -189,8 +189,14 @@ const CoursePage = () => {
                         {course.short_desc}
                     </p>
 
+                    <img
+                        src={'../courses/' + course.slug + '/' + course.image}
+                        className="rounded-circle md:hidden mt-20"
+                        style={{ width: '35rem', height: '37rem' }}
+                    />
+
                     <div
-                        className="mt-20 md:p-10 p-5 rounded-lg grid grid-cols-8"
+                        className="md:p-10 md:mt-20 p-5 rounded-lg grid grid-cols-8"
                         style={{ backgroundColor: course.color }}>
                         <p className="text-white text-2xl leading-relaxed md:col-span-6 col-span-8">
                             عندما تنتهي من الدورة، نحن نحثك على متابعة البحث في

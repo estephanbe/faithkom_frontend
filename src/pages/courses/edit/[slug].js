@@ -11,6 +11,7 @@ import CourseEditor from '@/components/CreateCourse/CourseEditor'
 import AppLayout from '@/components/Layouts/AppLayout'
 import LaravelAxios from '@/lib/axios'
 import axios from 'axios'
+import Categories from "@/components/CreateCourse/Categories";
 
 const EditCoursePage = () => {
     const router = useRouter()
@@ -22,6 +23,7 @@ const EditCoursePage = () => {
         short_desc: '',
         meta_keys: '',
         color: '',
+        cat_id: '',
         intro: '',
         image: '',
         header_background_image: '',
@@ -36,7 +38,11 @@ const EditCoursePage = () => {
         const fetchCourse = async () => {
             try {
                 const response = await LaravelAxios.get(`/api/courses/${slug}`)
-                setCourse(response.data.course)
+
+                if (response) {
+                    setCourse(response.data.course)
+                    setData(response.data.course)
+                }
             } catch (error) {
                 /* empty */
             }
@@ -91,6 +97,7 @@ const EditCoursePage = () => {
         formData.append('color', data.color)
         formData.append('intro', data.intro)
         formData.append('full_desc', data.full_desc)
+        formData.append('cat_id', data.cat_id)
 
         if (image == null) {
             // that means the image wasn't updated as it is not a file object
@@ -212,6 +219,10 @@ const EditCoursePage = () => {
                                 />
                             </div>
                             <div className="">
+                                <Categories
+                                    onData={handleChildData}
+                                    CurrentCat={course.cat_id}
+                                />
                                 <BasicInfo
                                     currentData={course}
                                     onData={handleChildData}

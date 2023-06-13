@@ -58,6 +58,11 @@ const Navigation = ({ user }) => {
                                 active={router.pathname === '/settings'}>
                                 Settings
                             </NavLink>
+                            <NavLink
+                                href="/categories"
+                                active={router.pathname === '/categories'}>
+                                Categories
+                            </NavLink>
                         </div>
                     </div>
 

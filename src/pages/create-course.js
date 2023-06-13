@@ -12,6 +12,7 @@ import axios from 'axios'
 import LaravelAxios from 'lib/axios'
 // import { useAuth } from '@/hooks/auth'
 import CourseIcon from '@/components/CreateCourse/CourseIcon'
+import Categories from '@/components/CreateCourse/Categories'
 
 const CreateCourse = () => {
     // const { user } = useAuth({ middleware: 'auth' })
@@ -22,6 +23,7 @@ const CreateCourse = () => {
         short_desc: '',
         meta_keys: '',
         color: '',
+        cat_id: '',
         intro: '',
         image: '',
         header_background_image: '',
@@ -61,6 +63,7 @@ const CreateCourse = () => {
 
     const SubmitCourse = async () => {
         let course_response = null
+
         const formData = new FormData()
         formData.append('title', data.title)
         formData.append('short_desc', data.short_desc)
@@ -68,6 +71,7 @@ const CreateCourse = () => {
         formData.append('color', data.color)
         formData.append('intro', data.intro)
         formData.append('full_desc', data.full_desc)
+        formData.append('cat_id', data.cat_id)
         formData.append(
             'image',
             getExtensionFromMimeType(data.image?.type, 'image'),
@@ -171,6 +175,7 @@ const CreateCourse = () => {
                                 />
                             </div>
                             <div className="">
+                                <Categories onData={handleChildData} />
                                 <BasicInfo onData={handleChildData} />
                                 <CourseContent onFileUpload={handleChildData} />
                             </div>

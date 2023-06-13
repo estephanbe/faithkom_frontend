@@ -89,7 +89,7 @@ export default async function handler(req, res) {
                 res.status(200).end() // OK
             } catch (error) {
                 res.setHeader('Allow', ['POST'])
-                res.status(500).end(`Something went wrong`)
+                res.status(500).end(error)
             }
         })
     } else {
