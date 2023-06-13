@@ -149,7 +149,7 @@ export default function Home() {
                         <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
                     </div>
 
-                    <div className={'lg:hidden w-full mt-52 px-5'}>
+                    <div className={'lg:hidden w-full mt-64 px-5'}>
                         <h4 className={'text-center my-5 text-2xl'}>
                             تصنيف الدورات
                         </h4>
@@ -164,7 +164,9 @@ export default function Home() {
                             {categories.map(cat => {
                                 return (
                                     <option key={cat.id} value={cat.id}>
-                                        {cat.name}
+                                        {cat.name === 'Uncategorized'
+                                            ? 'جميع الدورات'
+                                            : cat.name}
                                     </option>
                                 )
                             })}
