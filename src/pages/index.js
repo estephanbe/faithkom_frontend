@@ -125,7 +125,7 @@ export default function Home() {
                 <>
                     <div
                         id="faithkom-courses-list"
-                        className="w-full mt-52 px-5 lg:px-0 hidden lg:flex justify-center items-center gap-8">
+                        className="w-full mt-80 px-5 lg:px-0 hidden lg:flex justify-center items-center gap-8">
                         {categories.map(cat => {
                             return (
                                 <button
@@ -149,7 +149,7 @@ export default function Home() {
                         <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
                     </div>
 
-                    <div className={'lg:hidden w-full mt-64 px-5'}>
+                    <div className={'lg:hidden w-full mt-80 px-5'}>
                         <h4 className={'text-center my-5 text-2xl'}>
                             تصنيف الدورات
                         </h4>
